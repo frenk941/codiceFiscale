@@ -54,7 +54,7 @@ public class AnagraficaUtility {
                 meseNascita = 12;
                 break;
             default:
-                throw new IllegalArgumentException("Il mese inserito nel codice fiscale non è un mese valido");
+                throw new IllegalArgumentException("Il mese inserito nel codice fiscale rispetta le lettere della tabella ");
         }
         return meseNascita;
     }
@@ -79,9 +79,9 @@ public class AnagraficaUtility {
     //Determinazione anno di nascita
     public int determinaAnno(String annoCodiceFiscale) {
         int annoNascita = Integer.parseInt(annoCodiceFiscale);
-        int annoAttuale = today.getYear() % 100;
-        log.info("Seconde due cifre dell'anno attuale : " + annoAttuale);
-        if (annoNascita <= annoAttuale) {
+        int annoCorrente = today.getYear() % 100;
+        log.info("Seconde due cifre dell'anno corrente : " + annoCorrente);
+        if (annoNascita <= annoCorrente) {
             return 2000 + annoNascita;
         } else return 1900 + annoNascita;
     }

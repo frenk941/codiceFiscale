@@ -18,7 +18,7 @@ public class CodiceFiscaleUtility {
 
     /**
      * Appunti logica codice fiscale :
-     * example : TBRFNC94E15H501O
+     * example : ***
      * anno nascita segnato dalle ultime due cifre dell'anno di nascita
      * lettera che indica mese di nascita
      * giorno nascita
