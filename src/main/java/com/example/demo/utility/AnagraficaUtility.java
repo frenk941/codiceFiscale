@@ -89,7 +89,7 @@ public class AnagraficaUtility {
     //Calcolo età precisa in base al compleanno.
     public String calcoloEtà(Persona persona) {
         LocalDate birthday = LocalDate.of(persona.getAnno(), persona.getMese(), persona.getGiorno());
-        Period period = Period.between(today, birthday);
+        Period period = Period.between(birthday, today);
 
         return "Il proprietario del codice fiscale ha " + period.getYears() + " anni ed è nato il " + birthday.toString();
     }
